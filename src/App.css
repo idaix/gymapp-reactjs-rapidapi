@@ -1,0 +1,8 @@
+#main{
+    min-height: calc(100vh - 100px);
+}
+
+.text-strok{
+    -webkit-text-stroke: 1px white;
+    color: rgba(0, 0, 0, 0.1);
+}

@@ -7,10 +7,12 @@ function App() {
 
   return (
       <div>
-        <Routes>
-          <Route path='/' element={<Home /> }/>
-          <Route path='/exo/:id' element={<Exo /> }/>
-        </Routes>
+        <main id='main'>
+          <Routes>
+            <Route path='/' element={<Home /> }/>
+            <Route path='/exo/:id' element={<Exo /> }/>
+          </Routes>
+        </main>
         <Footer />
       </div>
   )

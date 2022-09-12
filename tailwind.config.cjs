@@ -10,7 +10,10 @@ module.exports = {
         primary: {
           DEFAULT: "#AADF3B",
         }
-      }
+      },
+      fontFamily: {
+        'titleFont': 'Kaushan Script'
+      } 
     },
   },
   plugins: [],
