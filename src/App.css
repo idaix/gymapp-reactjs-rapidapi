@@ -6,3 +6,8 @@
     -webkit-text-stroke: 1px white;
     color: rgba(0, 0, 0, 0.1);
 }
+
+
+::-webkit-scrollbar {
+    width: 0px;
+}

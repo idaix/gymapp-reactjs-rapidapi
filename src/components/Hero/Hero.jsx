@@ -5,7 +5,7 @@ import './Hero.css'
 const Hero = () => {
   return (
     <div className='w-full text-center md:text-start'>
-      <div className="container mx-auto pt-32 px-3 flex flex-col-reverse md:flex-row justify-between">
+      <div className="container mx-auto pt-10 px-3 flex flex-col-reverse md:flex-row justify-between items-center">
           <div className="flex-1">
             <h2 className='text-strok font-bold text-5xl uppercase'>Make Your</h2>
             <h1 className='font-bold text-6xl uppercase my-5'>BODY SHAPE</h1>
