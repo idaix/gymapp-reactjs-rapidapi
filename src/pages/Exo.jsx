@@ -1,14 +1,31 @@
-import React from 'react'
+
+import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { Navbar } from '../components'
+import { Detail, ExerciseVideos, Navbar, Section, SimilarExercise } from '../components'
+import { fetchExercisesData } from '../utils/fetchData'
 
 const Exo = () => {
   const { id } = useParams()
-  console.log(id);
+  const [exoDetail, setExoDetail] = useState([])
+  
+
+  useEffect(()=>{
+    fetchExercisesData(`exercises/exercise/${id}`).then(data=>setExoDetail(data))
+  }, [id])
+
+
+  console.log(exoDetail);
   return (
     <div>
-      <Navbar />
-      Exo id: {id}
+      <div className="">
+        <Navbar />
+      </div>
+      <div className="container mx-auto px-3">
+        <Section><Detail {...exoDetail} /></Section>
+        <Section title='Watch' description={`Watch ${exoDetail.name} exercise videos`}><ExerciseVideos /></Section>
+        <Section title='Similar' description={`Similar ${exoDetail.target} exercises`}><SimilarExercise /></Section>
+      </div>
+      
     </div>
   )
 }

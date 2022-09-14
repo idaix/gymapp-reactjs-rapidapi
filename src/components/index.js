@@ -10,4 +10,7 @@ export { default as Exercises } from './Exercises'
 export { default as BodyPartCard } from './BodyPartCard'
 export { default as Loader } from './Loader'
 export { default as ExoCard } from './ExoCard'
+export { default as Detail } from './Detail'
+export { default as ExerciseVideos } from './ExerciseVideos'
+export { default as SimilarExercise } from './SimilarExercise'
 
