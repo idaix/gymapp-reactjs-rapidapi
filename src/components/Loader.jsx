@@ -1,8 +1,8 @@
-import React from 'react'
+import './Loader.css'
 
 const Loader = () => {
   return (
-    <div>Loader</div>
+    <div class="lds-grid"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
   )
 }
 

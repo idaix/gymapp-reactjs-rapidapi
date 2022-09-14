@@ -19,7 +19,7 @@ const Home = () => {
           description="Awesome Exercises You Should Know"
         >
           <div className="md:px-10">
-            <SearchField setExercises={setExercises}/>
+            <SearchField setExercises={setExercises} setExoSelected={setExoSelected}/>
           </div>
         </Section>
         <Section title='Our Program' description="Build Yor best body">

@@ -3,7 +3,7 @@ import Button from './Button/Button'
 import {Input} from './'
 import {fetchExercisesData} from '../utils/fetchData'
 
-const SearchField = ({ setExercises}) => {
+const SearchField = ({ setExercises, setExoSelected }) => {
   const [ value, setValue ] = useState('')
   
   
@@ -22,6 +22,8 @@ const SearchField = ({ setExercises}) => {
       )
       setValue('')
       setExercises(searchedExo)
+      
+      window.scrollTo({ top: 900, left:100, behavior:'smooth', })
     }
 
   }

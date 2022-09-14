@@ -9,7 +9,7 @@ const BodyPartCard = ({ item, setExoSelected }) => {
       style={{minWidth: 220}}
       onClick={()=>{
         setExoSelected(item)
-        console.log('click on', item);
+        window.scrollTo({ top: 900, left:100, behavior:'smooth', })
       }}
     >
       <figure className='overflow-hidden w-10 h-10'>

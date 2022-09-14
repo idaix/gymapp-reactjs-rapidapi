@@ -31,13 +31,13 @@ const SearchExercises = ({ setExoSelected }) => {
 
   useEffect(() => {
     fetchExercisesData(`exercises/bodyPartList`)
-    .then( data=>setBodyPartsList(data))
+    .then( data=>setBodyPartsList([ 'all', ...data ]))
   }, [])
 
   return (
       <ScrollMenu LeftArrow={LeftArrow} RightArrow={RightArrow}>
         {bodyPartsList.map(item=>(
-            <BodyPartCard setExoSelected={setExoSelected} item={item} />
+            <BodyPartCard setExoSelected={setExoSelected} item={item} key={item} />
         ))}
       </ScrollMenu>
   )
