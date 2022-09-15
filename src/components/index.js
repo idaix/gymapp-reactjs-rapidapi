@@ -13,4 +13,6 @@ export { default as ExoCard } from './ExoCard'
 export { default as Detail } from './Detail'
 export { default as ExerciseVideos } from './ExerciseVideos'
 export { default as SimilarExercise } from './SimilarExercise'
+export { default as VideoCard } from './VideoCard'
+export { default as HorizontalScroll } from './HorizontalScroll'
 

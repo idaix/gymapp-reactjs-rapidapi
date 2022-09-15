@@ -1,28 +1,12 @@
-import { useEffect, useState, useContext } from 'react'
-import { ScrollMenu, VisibilityContext } from 'react-horizontal-scrolling-menu';
+import { useEffect, useState } from 'react'
 
 import { fetchExercisesData } from '../utils/fetchData'
 
 import { BodyPartCard } from './';
 
-import { AiFillLeftCircle, AiFillRightCircle } from 'react-icons/ai'
+import { HorizontalScroll } from '../components';
 
 
-const LeftArrow = () => {
-  const { scrollPrev } = useContext(VisibilityContext);
-
-  return (
-    <button className="p-2 text-2xl text-gray-400 hover:text-primary duration-300" onClick={() => scrollPrev()}><AiFillLeftCircle /></button>
-  );
-};
-
-const RightArrow = () => {
-  const { scrollNext } = useContext(VisibilityContext);
-
-  return (
-    <button className="p-2 text-2xl text-gray-400 hover:text-primary duration-300" onClick={() => scrollNext()}><AiFillRightCircle /></button>
-  );
-};
 
 
 const SearchExercises = ({ setExoSelected }) => {
@@ -35,11 +19,11 @@ const SearchExercises = ({ setExoSelected }) => {
   }, [])
 
   return (
-      <ScrollMenu LeftArrow={LeftArrow} RightArrow={RightArrow}>
+      <HorizontalScroll>
         {bodyPartsList.map(item=>(
             <BodyPartCard setExoSelected={setExoSelected} item={item} key={item} />
         ))}
-      </ScrollMenu>
+      </HorizontalScroll>
   )
 }
 

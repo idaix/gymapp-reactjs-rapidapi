@@ -46,7 +46,9 @@ const Detail = ({ bodyPart, equipment, gifUrl, name, target }) => {
         case 'upper arms' || 'lower arms':
           setImageTarget(Arm)
           break;
-          
+        case 'abs':
+          setImagebodyPart(Abs)
+          break;
         default:
           setImageTarget(All)
           break;
@@ -80,6 +82,7 @@ const Detail = ({ bodyPart, equipment, gifUrl, name, target }) => {
         case 'upper legs':
           setImagebodyPart(ULeg)
           break;
+        
         case 'upper arms' || 'lower arms':
           setImagebodyPart(Arm)
           break;
@@ -105,9 +108,13 @@ const Detail = ({ bodyPart, equipment, gifUrl, name, target }) => {
                     <img className='w-16 h-16 p-2 rounded-full' style={{ backgroundColor: '#222' }} src={imagebodyPart} alt={bodyPart} />
                     <span>{bodyPart}</span>
                 </li>
-                <li className='flex items-center gap-2'>
+                <li className='flex items-center gap-2 mb-2'>
                     <img className='w-16 h-16 p-2 rounded-full' style={{ backgroundColor: '#222' }} src={imageTarget} alt={target} />
                     {target}
+                </li>
+                <li className='flex items-center gap-2'>
+                    <img className='w-16 h-16 p-2 rounded-full' style={{ backgroundColor: '#222' }} src={imageTarget} alt={equipment} />
+                    {equipment}
                 </li>
             </ul>
         </div>
